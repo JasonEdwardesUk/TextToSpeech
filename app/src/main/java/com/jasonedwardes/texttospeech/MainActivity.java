@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         View view = binding.getRoot();
         setContentView(view);
         // check view.binding is working
-        binding.idTxt.setText("test");
+        //binding.idTxt.setText("test");
     }
 
     @Override
