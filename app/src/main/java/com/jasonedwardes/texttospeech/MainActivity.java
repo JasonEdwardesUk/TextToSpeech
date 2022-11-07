@@ -52,7 +52,29 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 String s = binding.idEditTxt.getText().toString();
                 textToSpeech.speak(s, TextToSpeech.QUEUE_FLUSH, null);
-               binding.idEditTxt.setText("");
+                seconds(s);
+
+               // int messageLength = s.length();
+               // long seconds;
+               // if (messageLength < 10) {
+               //     seconds = 10000;
+               // } else if (messageLength < 20) {
+               //     seconds = 2000;
+               // } else if(messageLength< 30){
+              //  seconds = 3000;
+               //  } else{
+               // seconds = 7000;
+               // }
+
+               // try {
+                  //  Thread.sleep(seconds);
+                 //   binding.idEditTxt.setText("");
+               //// } catch (InterruptedException e) {
+               //     e.printStackTrace();
+              //  }
+
+
+
             }
         });
         ///////////////////////////end of text to speech//////////////////////
@@ -78,6 +100,25 @@ public class MainActivity extends AppCompatActivity  {
 
         }
     }
+ void seconds(String s){
+        int messageLength = s.length();
+        long seconds;
+        if (messageLength < 10) {
+         seconds = 700;
+     } else if (messageLength < 20) {
+         seconds = 1400;
+     } else if(messageLength< 30){
+         seconds = 2800;
+     } else{
+         seconds = 4000;
+     }
 
+     try {
+         Thread.sleep(seconds);
+         binding.idEditTxt.setText("");
+     } catch (InterruptedException e) {
+         e.printStackTrace();
+     }
+ }
 
 }
