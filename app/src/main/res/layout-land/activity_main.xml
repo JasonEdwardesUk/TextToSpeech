@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:layout_margin="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <EditText
+       android:hint="@string/enter_text"
         android:id="@+id/id_edit_txt"
-        android:inputType="textPersonName"
+        android:textSize="22sp"
+        android:inputType="textPersonName|textMultiLine"
+        android:maxLength="150"
         android:gravity="start|top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -13,6 +17,7 @@
     <TextView
         android:id="@+id/id_txt"
         android:gravity="start|top"
+        android:textSize="22sp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"/>
@@ -27,7 +32,7 @@
             android:layout_height="101dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:text="@string/enter"
+            android:text="text to speech"
             android:textSize="20sp"
             android:layout_marginEnd="16dp"
             android:textStyle="bold" />
@@ -38,7 +43,7 @@
             android:layout_height="101dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:text="speech"
+            android:text="speech to text"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>

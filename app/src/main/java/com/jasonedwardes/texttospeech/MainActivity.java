@@ -27,9 +27,8 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
-        setContentView(view);
-        // check view.binding is working
-        //binding.idTxt.setText("test");
+       setContentView(view);
+
 
 //text to speech////////////////////////////////////////////
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity  {
 
             }
 
-            //binding.idBtn.setOnClickListener();
         });
 
         binding.idBtn.setOnClickListener(new View.OnClickListener() {
@@ -54,24 +52,6 @@ public class MainActivity extends AppCompatActivity  {
                 textToSpeech.speak(s, TextToSpeech.QUEUE_FLUSH, null);
                 seconds(s);
 
-               // int messageLength = s.length();
-               // long seconds;
-               // if (messageLength < 10) {
-               //     seconds = 10000;
-               // } else if (messageLength < 20) {
-               //     seconds = 2000;
-               // } else if(messageLength< 30){
-              //  seconds = 3000;
-               //  } else{
-               // seconds = 7000;
-               // }
-
-               // try {
-                  //  Thread.sleep(seconds);
-                 //   binding.idEditTxt.setText("");
-               //// } catch (InterruptedException e) {
-               //     e.printStackTrace();
-              //  }
 
 
 
@@ -120,5 +100,7 @@ public class MainActivity extends AppCompatActivity  {
          e.printStackTrace();
      }
  }
+ //one letter at 22sp = a width of 13dp
+
 
 }
