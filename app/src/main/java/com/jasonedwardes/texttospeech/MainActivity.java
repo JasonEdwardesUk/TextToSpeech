@@ -10,9 +10,11 @@ import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 
+
 import com.jasonedwardes.texttospeech.databinding.ActivityMainBinding;
 
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 String s = binding.idEditTxt.getText().toString();
                 textToSpeech.speak(s, TextToSpeech.QUEUE_FLUSH, null);
-
+               binding.idEditTxt.setText("");
             }
         });
         ///////////////////////////end of text to speech//////////////////////
@@ -76,5 +78,6 @@ public class MainActivity extends AppCompatActivity  {
 
         }
     }
+
 
 }
