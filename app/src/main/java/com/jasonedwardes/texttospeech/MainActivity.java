@@ -52,11 +52,9 @@ public class MainActivity extends AppCompatActivity  {
                 textToSpeech.speak(s, TextToSpeech.QUEUE_FLUSH, null);
                 seconds(s);
 
-
-
-
             }
         });
+
         ///////////////////////////end of text to speech//////////////////////
         ////////////////////start of speech to text///////////////////////////////
         binding.idBtnSpeech.setOnClickListener(new View.OnClickListener() {
